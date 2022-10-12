@@ -1,0 +1,227 @@
+@import "../../style/index.scss";
+
+.container {
+  position: relative;
+  text-align: left;
+}
+
+.label {
+  width: 100%;
+  position: relative;
+}
+
+.text {
+  font-family: $font_staat;
+  font-size: 14px;
+  line-height: 1.1;
+  letter-spacing: 0.24em;
+  font-feature-settings: "pnum" on, "lnum" on;
+  color: $white;
+  margin-bottom: 10px;
+
+  @media (max-width: $mobile) {
+    font-size: 14px;
+    line-height: 110%;
+    letter-spacing: 0.25em;
+  }
+}
+
+.descriptions {
+  font-family: $font_montserrat;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 15px;
+  color: $white;
+  opacity: 0.5;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  margin-bottom: 10px;
+}
+
+.input {
+  font-family: $font_josefin;
+  width: 100%;
+  background: $bg_input;
+  box-shadow: none;
+  outline: none;
+  border: none;
+  border-bottom: 1px solid rgba(#ffffff, 0.2);
+  box-sizing: border-box;
+
+  color: $white;
+  padding: 10px 11px;
+  height: 38px;
+  &:hover,
+  &:focus,
+  &:active {
+    background: $bg_input;
+    box-shadow: none;
+    outline: none;
+  }
+  &::placeholder {
+    color: $text_grey;
+  }
+
+  @media (max-width: $mobile) {
+    height: 40px;
+  }
+}
+
+.checkboxContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  background: $bg_input;
+}
+
+.checkbox {
+  display: flex;
+  align-items: center;
+  margin-left: 1px;
+
+  .checkbox_text {
+    margin-left: 8px;
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 13px;
+    line-height: 100%;
+    color: rgba(255, 255, 255, 0.5);
+
+    @media (max-width: $mobile) {
+      font-size: 10px;
+    }
+  }
+
+  .checked {
+    color: #ffffff;
+  }
+
+  input[type="checkbox"] {
+    width: 12px;
+    height: 12px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -o-appearance: none;
+    appearance: none;
+    outline: 1px solid gray;
+    box-shadow: none;
+    font-size: 0.8em;
+    text-align: center;
+    line-height: 1em;
+    background: $bg_input;
+    flex: none;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  input[type="checkbox"]:checked {
+    background: url("../../public/icons/markBlack.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    display: inline-block;
+    padding: 0;
+    background-color: white;
+    // box-shadow: 0px 0px 15px rgba(208, 108, 255, 0.5), inset 0px 0px 10px #D06CFF, inset 0px 0px 15px #D06CFF;
+    box-shadow: 0px 0px 15px rgba(208, 108, 255, 0.5),
+      inset 0px 0px 10px #d06cff, inset 0px 0px 15px #d06cff;
+  }
+
+  label {
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 17px;
+    color: #ffffff;
+  }
+  span {
+    font-size: 14px;
+    margin-right: 12px;
+  }
+}
+
+.tipError {
+  margin-top: 10px;
+  font: $font_josefin;
+  color: $error;
+}
+
+.icon {
+  width: 16px;
+  height: 16px;
+}
+
+.iconValidUser {
+  width: 44px;
+  height: 44px;
+}
+
+.wrapInput {
+  position: relative;
+}
+
+.eyeContainer {
+  position: absolute;
+  right: 13px;
+  top: 37px;
+}
+
+.notValidContainer,
+.checkContainer {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+
+  .span {
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 15px;
+    display: flex;
+    align-items: center;
+
+    letter-spacing: 0.02em;
+
+    color: rgba(255, 255, 255, 0.5);
+  }
+}
+
+.checkContainer {
+  right: 0;
+}
+
+.notValidContainer {
+  svg {
+    margin-left: 15px;
+  }
+}
+
+.descContainer {
+  display: flex;
+  justify-content: space-between;
+}
+.error,
+.autherror,
+.lengthError {
+  .input {
+    background: rgba(255, 0, 46, 0.05);
+    border-bottom: 1px solid #ff002e;
+  }
+}
+
+.forgotLink {
+  height: 20px;
+  text-decoration: underline;
+  color: $violet;
+
+  :hover {
+    text-decoration: none;
+  }
+}

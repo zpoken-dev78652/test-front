@@ -1,0 +1,80 @@
+@import "../../style/index";
+
+.unsubscrib {
+  .header {
+    padding: 30px;
+    @media (max-width: $mobile) {
+      padding: 20px;
+    }
+  }
+
+  .contentWrap {
+    min-height: calc(var(--fullHeight) - 89px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+
+    @media (max-width: $mobile) {
+      padding: 20px;
+    }
+  }
+
+  .content {
+    width: 500px;
+    max-width: 100%;
+    text-align: center;
+    font-family: "Montserrat";
+    font-style: normal;
+    color: $white;
+
+    .icon {
+      width: 90px;
+      height: 90px;
+      margin-bottom: 40px;
+
+      @media (max-width: $mobile) {
+        margin-bottom: 30px;
+      }
+    }
+
+    .title {
+      font-weight: 700;
+      font-size: 40px;
+      line-height: 110%;
+
+      @media (max-width: $mobile) {
+        font-size: 30px;
+      }
+    }
+
+    .desc {
+      font-weight: 600;
+      font-size: 14px;
+      line-height: 170%;
+      letter-spacing: -0.01em;
+      margin-top: 20px;
+
+      &:first-of-type {
+        opacity: 0.5;
+      }
+
+      @media (max-width: $mobile) {
+        font-size: 12px;
+      }
+    }
+
+    .errorDesc {
+      font-weight: 600;
+      font-size: 14px;
+      line-height: 170%;
+      letter-spacing: -0.01em;
+      margin-top: 20px;
+    }
+
+    .btn {
+      margin: 40px auto 0;
+      max-width: 245px;
+    }
+  }
+}

@@ -1,0 +1,53 @@
+@import "../../style/index.scss";
+
+.wrapForm {
+  @media (max-width: $mobile) {
+    display: flex;
+    flex-direction: column;
+    height: var(--fullHeight);
+    width: 100%;
+  }
+
+  .mobileHeader {
+    display: none;
+
+    @media (max-width: $mobile) {
+      display: block;
+      background: rgba(17, 18, 18, 0.9);
+      border-bottom: 1px solid #302f31;
+      backdrop-filter: blur(42px);
+      padding: 20px;
+      font-family: "Montserrat";
+      font-style: normal;
+      font-weight: 600;
+      font-size: 24px;
+      line-height: 100%;
+      letter-spacing: 0.01em;
+      color: #ffffff;
+      height: 64px;
+
+      @supports not (backdrop-filter: blur(42px)) {
+        background: #292a2a;
+      }
+    }
+  }
+}
+
+.twoFaWrapper {
+  width: 400px;
+  max-width: 100%;
+
+  @media (max-width: $mobile) {
+    max-width: calc(100% - 40px);
+
+    height: 100%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .authCode {
+    margin-bottom: 30px;
+  }
+}

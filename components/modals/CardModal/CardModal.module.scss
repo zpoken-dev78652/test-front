@@ -1,0 +1,110 @@
+@import "../../../style/index.scss";
+
+.container {
+  width: 903px;
+  background: rgba(255, 255, 255, 0.1);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  align-items: flex-start;
+  display: flex;
+  padding: 40px;
+  @supports not (backdrop-filter: blur(52px)) {
+    background: #292a2a;
+  }
+
+  @media (max-width: $mobile) {
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    max-width: calc(100% - 60px);
+    margin: auto;
+    padding: 30px 20px 20px;
+  }
+
+  .img {
+    flex: 0 0 33.33%;
+    padding-bottom: 33%;
+    @include bgImg();
+    position: relative;
+
+    @media (max-width: $mobile) {
+      flex: 0 0 50%;
+      padding-bottom: 50%;
+      width: 50%;
+      margin: 0 auto 30px;
+    }
+  }
+
+  .video {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+  }
+
+  .content {
+    flex: 0 1 66%;
+  }
+  .content {
+    margin-left: 40px;
+
+    @media (max-width: $mobile) {
+      margin-left: 0;
+      width: 100%;
+    }
+
+    .name {
+      font-family: "Montserrat";
+      font-style: normal;
+      font-weight: bold;
+      font-size: 24px;
+      line-height: 120%;
+      color: $white;
+      margin-bottom: 30px;
+
+      @media (max-width: $mobile) {
+        margin-bottom: 20px;
+        font-size: 20px;
+      }
+    }
+
+    .number {
+      font-family: "Montserrat";
+      font-style: normal;
+      font-weight: 600;
+      font-size: 16px;
+      line-height: 20px;
+      /* identical to box height */
+
+      color: #847a89;
+    }
+
+    .descriptions {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      .item {
+        &:not(:last-of-type) {
+          margin-bottom: 15px;
+        }
+      }
+
+      .itemInput {
+        margin-top: 30px;
+      }
+    }
+
+    .btnList {
+      display: flex;
+      margin-top: 30px;
+      :first-child {
+        margin-right: 10px;
+      }
+    }
+  }
+}
+
+.tipError {
+  margin-top: 10px;
+  font: $font_josefin;
+  color: $error;
+}

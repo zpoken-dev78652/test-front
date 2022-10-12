@@ -1,0 +1,45 @@
+@import "../../../../../style/index";
+
+.btnFiat {
+  background: rgba($white, 0.1);
+  padding: 20px;
+  width: 100%;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  .content {
+    display: flex;
+    align-items: center;
+  }
+
+  .svg {
+    background: rgba(255, 255, 255, 0.1);
+    width: 36px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  span {
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 110%;
+    margin-left: 20px;
+    color: $white;
+  }
+
+  .arrowIcon {
+    transition: $transitionEase;
+  }
+
+  &:hover {
+    cursor: pointer;
+
+    .arrowIcon {
+      transform: translateX(5px);
+    }
+  }
+}

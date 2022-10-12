@@ -1,0 +1,61 @@
+@import "../../../style/index.scss";
+
+.container {
+  width: 65%;
+  // height: 310px;
+  background: rgba(255, 255, 255, 0.1);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+
+  @supports not (backdrop-filter: blur(10px)) {
+    background: #292a2a;
+  }
+
+  padding: 40px;
+  margin: 0 auto;
+
+  @media (max-width: $mobile) {
+    width: 100vw;
+    max-width: calc(100% - 60px);
+    padding: 30px 20px 20px;
+  }
+
+  .header {
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 120%;
+    color: $white;
+    margin-bottom: 10px;
+
+    @media (max-width: $mobile) {
+      font-size: 20px;
+      line-height: 150%;
+    }
+  }
+
+  .paragraph {
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 170%;
+    letter-spacing: -0.04em;
+    color: $white;
+    margin-bottom: 20px;
+
+    @media (max-width: $mobile) {
+      font-size: 12px;
+      margin-bottom: 30px;
+    }
+  }
+
+  button {
+    &:not(:first-of-type) {
+      @media (max-width: $mobile) {
+        margin-top: 10px;
+      }
+    }
+  }
+}

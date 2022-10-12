@@ -1,0 +1,112 @@
+@import "../../../style/index.scss";
+
+.form {
+  display: flex;
+  flex-direction: column;
+  margin: -10px 0 -20px 0;
+  .input {
+    margin: 20px 0;
+    flex: 1 1 auto;
+
+    .tipError {
+      margin-top: 20px;
+      font: $font_josefin;
+      color: $error;
+    }
+  }
+
+  .button {
+    margin-top: 30px;
+  }
+}
+.form {
+  .input {
+    margin-bottom: 20px;
+
+    .tipError {
+      margin-top: 20px;
+      font: $font_josefin;
+      color: $error;
+    }
+
+    .info {
+      margin-top: 20px;
+      font: $font_josefin;
+      color: $white;
+    }
+  }
+
+  a {
+    display: flex;
+    justify-content: flex-end;
+    color: #d06cff;
+    margin-bottom: -25px;
+  }
+
+  .header {
+    font-family: $font_staat;
+    font-size: 18px;
+    line-height: 1.1;
+    letter-spacing: 0.24em;
+    font-feature-settings: "pnum" on, "lnum" on;
+    color: $white;
+    margin-bottom: 10px;
+  }
+
+  .row {
+    display: flex;
+    margin-bottom: 20px;
+    .inputPhoneMask {
+      width: 30%;
+      margin-right: 10px;
+    }
+    .inputPhone {
+      width: 70%;
+      margin-top: 10px;
+    }
+  }
+}
+
+.switch {
+  margin-top: 20px;
+  text-align: end;
+  .white {
+    font: $font_montserrat;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
+    color: $white;
+  }
+
+  .violet {
+    font: $font_montserrat;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
+    color: $violet;
+    text-decoration: underline;
+  }
+
+  .violet:hover {
+    cursor: pointer;
+  }
+}
+
+.link {
+  color: $error;
+  text-decoration: underline;
+
+  &:hover {
+    cursor: pointer;
+    color: lighten($error, 10);
+  }
+}
+
+.form {
+  @media (max-width: $mobile) {
+    padding: 20px;
+    height: 100%;
+  }
+}

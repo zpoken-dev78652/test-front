@@ -1,0 +1,84 @@
+@import "../../../style/index.scss";
+
+.input {
+  margin-top: 20px;
+  font-weight: 600;
+}
+
+.img {
+  margin-left: 5px;
+}
+
+.form {
+  padding-bottom: 30px;
+}
+
+.bankElements {
+  margin-top: 30px;
+  .powered {
+    margin-bottom: 10px;
+  }
+  input {
+    margin-top: 10px;
+  }
+}
+
+.last {
+  padding-bottom: 20px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.creditCard {
+  display: flex;
+  gap: 10px;
+
+  .maskInputWrap {
+    width: 100%;
+  }
+
+  .maskInput {
+    input {
+      margin-top: 0;
+    }
+  }
+
+  .date {
+    width: 88px;
+  }
+
+  .cvv {
+    width: 88px;
+  }
+}
+
+.infoList {
+  margin-top: 10px;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 10px;
+  line-height: 170%;
+  color: $white;
+  opacity: 0.5;
+
+  .info {
+    padding: 0;
+    padding-left: 15px;
+    position: relative;
+
+    &:not(:last-of-type) {
+      margin-bottom: 5px;
+    }
+
+    &::before {
+      border-radius: 50%;
+      content: "";
+      left: 6px;
+      top: 6px;
+      position: absolute;
+      height: 3px;
+      width: 3px;
+      background-color: rgba($white, 0.5);
+    }
+  }
+}

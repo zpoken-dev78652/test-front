@@ -1,0 +1,10 @@
+.tooltipe {
+  backdrop-filter: blur(50px);
+  padding: 10px !important;
+  border-radius: none !important;
+  z-index: 4000 !important;
+
+  @supports not (backdrop-filter: blur(50px)) {
+    background: #292a2a !important;
+  }
+}

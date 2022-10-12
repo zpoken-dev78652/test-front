@@ -1,0 +1,178 @@
+@import "../../style/index.scss";
+
+.container {
+  .more {
+    margin: 0 auto;
+    margin-top: 40px;
+    width: 200px;
+  }
+
+  .btnLoadMore {
+    font-size: 14px;
+    line-height: 130%;
+    height: 38px;
+    max-width: 536px;
+  }
+
+  .mainContent {
+    display: flex;
+
+    .rightSide {
+      flex: 0 0 75%;
+      display: flex;
+      flex-direction: column;
+      padding-left: 30px;
+      margin-top: -29px;
+      .feutured {
+        display: flex;
+        flex-direction: column;
+        border-bottom: 1px solid rgba(#ffffff, 0.1);
+        .favoriteCard {
+          display: flex;
+          justify-content: space-between;
+          margin-bottom: 20px;
+          .add {
+            flex: 0 0 32%;
+            padding: 22.5px 0;
+            background: rgba(255, 255, 255, 0.05);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            p {
+              font-family: "Staatliches";
+              font-style: normal;
+              font-weight: normal;
+              font-size: 14px;
+              line-height: 110%;
+              letter-spacing: 0.15em;
+              color: #ffffff;
+              opacity: 0.5;
+              margin-top: 10px;
+            }
+          }
+        }
+        .feuturedHeader {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          .title {
+            .question {
+              margin-left: 15px;
+              svg {
+                path {
+                  opacity: 0.5;
+                }
+              }
+            }
+          }
+        }
+      }
+      .itemHeader {
+        display: flex;
+        justify-content: space-between;
+      }
+
+      .title {
+        margin-bottom: 20px;
+        font-family: "Staatliches";
+        font-style: normal;
+        font-weight: normal;
+        font-size: 24px;
+        line-height: 70%;
+        color: $white;
+        letter-spacing: 0.15em;
+        .question {
+          margin-left: 15px;
+        }
+      }
+    }
+  }
+}
+.icon {
+  margin-bottom: 20px;
+}
+
+.leftSide {
+  flex: 0 0 25%;
+  // width: 25%;
+}
+.more {
+  button {
+    border: none;
+    background: none;
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}
+
+.rotate {
+  transform: rotate(180deg);
+}
+
+.cards {
+  .notFound {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    margin-top: 10%;
+
+    h3 {
+      margin-top: 50px;
+
+      font-family: "Montserrat";
+      font-style: normal;
+      font-weight: bold;
+      font-size: 30px;
+      line-height: 37px;
+      /* identical to box height */
+
+      text-align: center;
+
+      color: $white;
+    }
+
+    p {
+      margin-top: 10px;
+
+      font-family: "Montserrat";
+      font-style: normal;
+      font-weight: 600;
+      font-size: 16px;
+      line-height: 20px;
+      /* identical to box height */
+
+      text-align: center;
+
+      color: rgba(255, 255, 255, 0.5);
+    }
+  }
+}
+
+.spiner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media (max-width: 768px) {
+  .counts {
+    margin-left: 20px;
+  }
+}
+
+@media (max-width: $mobile) {
+  .container {
+    .mainContent {
+      flex-direction: column;
+
+      .rightSide {
+        margin-top: 0;
+        padding-left: 0;
+        flex: 0 0 100%;
+      }
+    }
+  }
+}

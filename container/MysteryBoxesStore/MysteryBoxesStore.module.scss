@@ -1,0 +1,76 @@
+@import "../../style/index.scss";
+
+.content {
+  &:not(:first-of-type) {
+    margin-top: 30px;
+  }
+}
+
+.banner {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  color: $white;
+  background: url("../../public/img/collection_header.png");
+  background-size: cover;
+  background-position: center;
+  padding: 48px;
+  text-align: center;
+  margin-bottom: 50px;
+
+  @media (max-width: $md4) {
+    padding: 32px 39px;
+  }
+
+  &__subTitle {
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 29px;
+    margin-bottom: 30px;
+
+    @media (max-width: $md4) {
+      font-size: 12px;
+      line-height: 140%;
+      margin-bottom: 10px;
+    }
+  }
+
+  &__title {
+    font-family: "Staatliches";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 64px;
+    line-height: 100%;
+    letter-spacing: 0.15em;
+    margin: 0;
+
+    @media (max-width: $md4) {
+      font-size: 36px;
+      max-width: 100%;
+    }
+  }
+
+  .gradient {
+    background: linear-gradient(
+      90.47deg,
+      #ff6c6c 44.54%,
+      #d06cff 78.11%,
+      #5900b9 108.04%
+    );
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+}
+
+.mysteryBoxeWrapper {
+  display: grid;
+  grid-template-columns: repeat(2, calc(50% - 10px));
+  grid-gap: 20px;
+
+  @media (max-width: $md4) {
+    grid-template-columns: 100%;
+  }
+}

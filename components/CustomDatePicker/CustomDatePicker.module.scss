@@ -1,0 +1,66 @@
+@import "../../style/index.scss";
+
+.datePickerHeader {
+  display: flex;
+  justify-content: space-around;
+  color: $white;
+}
+
+.container {
+  display: flex;
+
+  .error {
+    margin-top: 10px;
+    font: $font_josefin;
+    color: $error;
+  }
+
+  .picker {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+
+    .label {
+      font-family: $font_staat;
+      font-size: 18px;
+      line-height: 1.1;
+      letter-spacing: 0.24em;
+      font-feature-settings: "pnum" on, "lnum" on;
+      color: $white;
+      margin-bottom: 10px;
+    }
+  }
+
+  .calendar {
+    margin-top: 40px;
+    margin-left: 370px;
+    position: fixed;
+    z-index: 2;
+    width: 16px;
+    height: 16px;
+  }
+}
+
+.wrapperDate {
+  position: relative;
+}
+
+.icon {
+  width: 16px;
+  height: 16px;
+}
+
+.iconCalendar {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 15px;
+  width: 16px;
+  height: 16px;
+}
+
+.btn {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}

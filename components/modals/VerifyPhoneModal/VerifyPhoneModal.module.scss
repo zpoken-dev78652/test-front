@@ -1,0 +1,89 @@
+@import "../../../style/index.scss";
+
+.twoFaModal {
+  display: flex;
+  flex-direction: column;
+  height: var(--fullHeight);
+  width: 540px;
+  border-left: 1px solid #302f31;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(60px);
+
+  @supports not (backdrop-filter: blur(60px)) {
+    background: #292a2a;
+  }
+
+  @media (max-width: $mobile) {
+    width: 100vw;
+  }
+
+  .header {
+    font-family: "Staatliches";
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 30px;
+    letter-spacing: 0.15em;
+    color: #fff;
+    padding: 20px 30px 18px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  .contentWrap {
+    max-height: calc(var(--fullHeight) - 69px);
+    overflow: auto;
+  }
+
+  .content {
+    padding: 30px;
+  }
+
+  .btns {
+    padding: 0 30px 30px;
+  }
+
+  .authCode {
+    margin-top: 30px;
+  }
+
+  .congratulation {
+    height: calc(var(--fullHeight) - 69px);
+    padding: 30px;
+    font-style: normal;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    .icon {
+      flex: none;
+      width: 90px;
+      height: 90px;
+    }
+
+    .title {
+      font-family: "Staatliches";
+      font-weight: 400;
+      font-size: 36px;
+      line-height: 45px;
+      letter-spacing: 0.15em;
+      color: $white;
+      margin-top: 30px;
+    }
+
+    .desc {
+      font-family: "Montserrat";
+      font-weight: 600;
+      font-size: 14px;
+      line-height: 170%;
+      text-align: center;
+      letter-spacing: -0.04em;
+      color: $white;
+      margin-top: 10px;
+    }
+
+    .btn {
+      margin-top: 30px;
+    }
+  }
+}

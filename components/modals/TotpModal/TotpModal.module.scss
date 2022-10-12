@@ -1,0 +1,53 @@
+@import "../../../style/index.scss";
+
+.container {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(50px);
+  padding: 30px;
+  width: 500px;
+  max-width: calc(100% - 40px);
+  margin: auto;
+  font-family: "Montserrat";
+  font-style: normal;
+  color: $white;
+  text-align: center;
+
+  @supports not (backdrop-filter: blur(50px)) {
+    background: #292a2a;
+  }
+
+  @media (max-width: $mobile) {
+    padding: 20px;
+  }
+
+  .icon {
+    max-width: 150px;
+    margin: auto;
+  }
+
+  .title {
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 100%;
+    margin-top: 30px;
+  }
+
+  .desc {
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 170%;
+    letter-spacing: -0.01em;
+    margin-top: 20px;
+  }
+
+  .btns {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 10px;
+    margin-top: 30px;
+
+    @media (max-width: $mobile) {
+      grid-template-columns: 1fr;
+    }
+  }
+}

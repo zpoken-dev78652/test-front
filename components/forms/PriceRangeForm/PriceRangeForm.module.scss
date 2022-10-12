@@ -1,0 +1,61 @@
+@import '../../../style/index.scss';
+
+.priceCountList{
+    display: flex;
+    flex-direction: column;
+    margin: -12px 0;
+
+    padding-bottom: 20px;
+
+    .fromToPrice{
+        margin-top: 20px;
+        margin-bottom: 30px;
+    }
+    .priceCount{
+        padding: 12px 0 12px 5px;
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 16px;
+        /* identical to box height */
+
+        color: #847A89;
+
+        &:hover {
+            cursor: pointer;
+            background-color: #282A2A;
+            color: $white;
+        }
+
+    }
+
+    .selected{
+        // padding: 10px;
+        background-color: #282A2A;
+
+        color: $white;
+    }
+
+    .inputs{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        margin: 10px 0;
+
+        
+
+        .input{
+            flex: 1 1 45%;
+        }
+
+        .rectangle{
+            flex: 1 1 10%;
+        }
+
+        .rectangle{
+            padding-left: 5px;
+            margin-top: 20px;
+        }
+    }
+}

@@ -1,0 +1,248 @@
+@import "../../style/index";
+
+.phoneVerify {
+  grid-template-columns: 1fr 92px;
+  grid-gap: 10px;
+  display: grid;
+
+  @media (max-width: $mobile) {
+    grid-template-columns: 1fr;
+  }
+
+  .phoneInput {
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 15px;
+    color: $white;
+    background: rgba($white, 0.05);
+    border: none;
+    border-bottom: 1px solid rgba($white, 0.2);
+    padding: 10px;
+  }
+
+  .btn {
+    max-width: 92px;
+    height: 36px;
+
+    @media (max-width: $mobile) {
+      max-width: 100%;
+    }
+  }
+
+  .container {
+    // background: rgba($white, 0.05);
+    // border-bottom: 1px solid rgba($white, 0.2);
+    border: none;
+    border-radius: 0;
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 10px;
+
+    .input {
+      width: 100%;
+      height: 100%;
+      padding: 10px;
+      font-family: "Montserrat";
+      font-style: normal;
+      font-weight: 600;
+      font-size: 12px;
+      line-height: 15px;
+      color: $white;
+      background: none;
+      border: none;
+      border-bottom: 1px solid rgba($white, 0.2);
+      border-radius: 0;
+      background: rgba($white, 0.05);
+
+      &.error {
+        background: rgba($error, 0.2);
+        border-color: $error;
+      }
+    }
+
+    :global {
+      input.invalid-number,
+      div.invalid-number,
+      input.invalid-number:hover,
+      input.invalid-number:focus,
+      div.invalid-number:hover,
+      div.invalid-number:focus {
+        background: rgba(255, 0, 46, 0.05);
+        border: none;
+        border-bottom: 1px solid #ff002e;
+      }
+    }
+
+    :global {
+      .flag-dropdown.open {
+        border-bottom: 1px solid rgba($white, 0.2);
+        border-radius: 0;
+        background: rgba($white, 0.05) !important;
+      }
+
+      .flag-dropdown.open.invalid-number {
+        background: rgba(255, 0, 46, 0.05) !important;
+        border: none;
+        border-bottom: 1px solid #ff002e;
+      }
+
+      .flag-dropdown.open .selected-flag {
+        border: none;
+      }
+    }
+
+    .dropdown {
+      background: #292a2a;
+
+      :global {
+        .country.highlight {
+          background: rgba($white, 0.1);
+        }
+      }
+
+      li {
+        &:hover {
+          background: rgba($white, 0.05);
+        }
+        span {
+          color: $white;
+        }
+      }
+    }
+
+    .button {
+      border: none;
+      background: none;
+      position: relative;
+      border-bottom: 1px solid rgba($white, 0.2);
+      background: rgba($white, 0.05);
+      border-radius: 0;
+
+      &.error {
+        background: rgba($error, 0.2);
+        border-color: $error;
+      }
+
+      :global {
+        .open,
+        .selected-flag {
+          background: none !important;
+          border: none;
+        }
+      }
+
+      :global {
+        .arrow {
+          width: 10px;
+          height: 10px;
+          background-image: url("../../public/icons/selectArrow.svg");
+          border: none;
+          background-size: contain;
+          background-repeat: no-repeat;
+          background-position: center;
+          transform: translateY(-50%);
+          margin: 0;
+          transition: $transitionEase;
+          margin-left: auto;
+        }
+
+        .up {
+          transform: translateY(-50%) rotate(180deg);
+        }
+      }
+
+      & > div {
+        background: none;
+        border: none;
+        padding: 10px;
+        width: 55px;
+
+        :global {
+          .open {
+            background: none;
+            border: none;
+          }
+        }
+      }
+    }
+
+    .search {
+      border-bottom: 1px solid rgba($white, 0.2);
+      border-radius: 0;
+      background: #292a2a !important;
+      padding: 0 !important;
+
+      input {
+        padding: 10px;
+        margin: 0;
+        width: 100%;
+        font-family: "Montserrat";
+        font-style: normal;
+        font-weight: 600;
+        font-size: 12px;
+        line-height: 15px;
+        color: $white;
+        background: none;
+        border: none;
+
+        &::placeholder {
+          color: rgba($white, 0.5);
+          text-transform: capitalize;
+        }
+      }
+    }
+  }
+}
+
+.wrapperLabel {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.label {
+  font-family: "Staatliches";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 110%;
+  letter-spacing: 0.15em;
+  color: $white;
+}
+
+.list {
+  margin-top: 10px;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 10px;
+  color: $white;
+
+  &.error {
+    color: $error;
+    .item {
+      &::before {
+        background-color: $error;
+      }
+    }
+  }
+
+  .item {
+    position: relative;
+    padding-left: 16px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 6px;
+      left: 7px;
+      width: 2px;
+      height: 2px;
+      background-color: $white;
+      border-radius: 50%;
+    }
+  }
+}

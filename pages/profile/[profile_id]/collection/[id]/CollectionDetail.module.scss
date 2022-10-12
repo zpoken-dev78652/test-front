@@ -1,0 +1,49 @@
+@import "../../../../../style/index.scss";
+
+.navigation {
+  @include container();
+  margin-bottom: 21px;
+  display: flex;
+  .arror {
+    transform: rotate(90deg);
+    margin-left: 13px;
+    width: 12px;
+    opacity: 0.5;
+  }
+
+  .nav1 {
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 13px;
+    line-height: 16px;
+    color: $white;
+    opacity: 0.5;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+  }
+  .nav2 {
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 13px;
+    line-height: 16px;
+    color: $white;
+    margin-left: 13px;
+  }
+}
+.container {
+  @include container();
+  margin-top: 20px;
+
+  @media (max-width: $mobile) {
+    padding: 0 20px;
+  }
+}
+
+.loader {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}

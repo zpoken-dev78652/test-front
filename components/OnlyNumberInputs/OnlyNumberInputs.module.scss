@@ -1,0 +1,55 @@
+@import '../../style/index.scss';
+
+.container {
+    position: relative;
+    text-align: left;
+}
+
+    .label {
+        width: 100%;
+        position: relative;
+        .text {
+            font-family: 'Montserrat';
+            font-style: normal;
+            font-weight: 600;
+            font-size: 16px;
+            line-height: 16px;
+            /* identical to box height */
+
+
+            color: #FFFFFF;
+            margin-bottom: 5px;
+         }
+
+    .input {
+        font-family: $font_josefin;
+        width: 100%;
+        background: $bg_input;
+        box-shadow: none;
+        outline: none;
+        border: none;
+        border-bottom: 1px solid rgba(#ffffff, 0.2);
+        box-sizing: border-box;
+
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 16px;
+        text-align: center;
+
+        color: #847A89;
+        padding: 10px 11px;
+        height: 38px;
+        &:hover,
+        &:focus,
+        &:active {
+            background: $bg_input;
+            box-shadow: none;
+            outline: none;
+        }
+        &::placeholder{
+            color: $text_grey;
+        }
+    }
+}

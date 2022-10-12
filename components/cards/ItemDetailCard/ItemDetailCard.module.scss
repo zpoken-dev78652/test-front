@@ -1,0 +1,121 @@
+@import "../../../style/index.scss";
+
+.container {
+  @include container();
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 10px;
+
+  @media (max-width: $mobile) {
+    grid-template-columns: 1fr;
+  }
+
+  // display: flex;
+  // justify-content: space-around;
+  // gap: 10px;
+
+  // .img {
+  //   flex: 0 0 50%;
+  //   position: relative;
+  // }
+}
+
+.timerWrap {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(30px);
+  padding: 20px;
+  @supports not (backdrop-filter: blur(52px)) {
+    background: #292a2a;
+  }
+
+  .label {
+    font-family: Staatliches;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 120%;
+    text-align: center;
+    letter-spacing: 0.15em;
+    color: $white;
+    margin-bottom: 10px;
+  }
+
+  .timer {
+    display: flex;
+    justify-content: center;
+    font-family: Staatliches;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 120%;
+    text-align: center;
+    letter-spacing: 0.15em;
+    color: $white;
+  }
+}
+
+.communitySalesWrapper {
+  margin-top: 20px;
+}
+
+.bidsWrap {
+  max-height: 400px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  margin-top: 20px;
+}
+.tabs {
+  margin-top: 30px;
+  padding: 0 15px 10px;
+
+  @media (max-width: $mobile) {
+    padding: 0 0 10px;
+  }
+
+  .tabsHeader {
+    margin-bottom: 20px;
+  }
+
+  .detailList {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+
+    .item {
+      &:not(:last-of-type) {
+        margin-bottom: 15px;
+      }
+    }
+
+    .detailLink {
+      text-decoration-line: underline;
+      color: $violet;
+      font-family: "Montserrat";
+      font-style: normal;
+      font-weight: 500;
+
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
+
+  .detailsTab {
+    display: flex;
+    flex-direction: column;
+    .descriptions {
+      font-family: "Montserrat";
+      font-style: normal;
+      font-weight: 600;
+      font-size: 14px;
+      line-height: 170%;
+      letter-spacing: -0.01em;
+      color: $white;
+      margin-top: 20px;
+
+      @media (max-width: $mobile) {
+        font-size: 12px;
+      }
+    }
+  }
+}

@@ -1,0 +1,183 @@
+@import "./index.scss";
+
+#onfido-sdk-wrapper {
+  display: flex;
+
+  ul[class] {
+    margin-top: 20px;
+  }
+
+  .onfido-sdk-ui {
+    &-Camera-actions {
+      text-align: center;
+    }
+
+    &-Complete-wrapper {
+      text-align: center;
+    }
+
+    &-Complete-icon {
+      background-image: url("../public/img/onfido/complete.svg");
+      width: 100px;
+      height: 100px;
+      margin: 0 auto 40px;
+    }
+
+    &-Error-container {
+      border-radius: 0;
+    }
+
+    &-Error-roundedTriangle {
+      border-bottom-left-radius: 0;
+    }
+
+    &-QRCode-qrCodeHelpIcon {
+      display: none;
+    }
+
+    &-crossDevice-CrossDeviceLink {
+      &-container {
+        text-align: center;
+      }
+
+      &-copyLinkOption,
+      &-smsLinkOption {
+        &::before {
+          display: none;
+        }
+      }
+    }
+    &-Theme-logo {
+      width: 140px;
+      margin: auto;
+      background-image: url("../public/img/onfido/onfido_footer_logo.svg");
+      background-position: bottom;
+    }
+
+    &-NavigationBar {
+      &-iconBack {
+        width: 12px;
+        height: 12px;
+        background-image: url("../public/img/onfido/arrow-left.svg");
+        background-color: transparent;
+      }
+
+      &-label {
+        display: none;
+      }
+      &-navigation {
+        padding: 30px 30px 0;
+        height: 12px;
+        margin-bottom: 10px;
+      }
+
+      &-back {
+        display: flex;
+      }
+    }
+
+    &-Modal-inner {
+      text-align: left;
+      background-color: transparent;
+
+      @media (max-width: $mobile) {
+        height: calc(100vh - 40px - 69px);
+        width: calc(100% - 40px);
+      }
+    }
+
+    &-PageTitle {
+      &-title {
+        margin-bottom: 10px;
+        letter-spacing: 0.15em;
+      }
+
+      &-titleWrapper {
+        margin: 0;
+      }
+    }
+
+    &-Welcome-instructions {
+      width: 100%;
+      margin-top: 30px;
+    }
+
+    &-Theme-button-lg {
+      width: 100%;
+    }
+
+    &-DocumentSelector {
+      &-option {
+        padding: 10px;
+        &::after {
+          background: url("../public/img/onfido/arrow-right.svg");
+          background-repeat: no-repeat;
+          background-size: 12px;
+          background-position: center;
+          right: 13px;
+        }
+      }
+
+      &-label {
+        font-size: 16px;
+        line-height: 150%;
+      }
+
+      &-hint {
+        font-weight: 600;
+        font-size: 13px;
+        line-height: 150%;
+        opacity: 0.5;
+      }
+    }
+
+    &-CountrySelector {
+      &-dropdownIcon {
+        background: url("../public/img/onfido/search.svg");
+        background-repeat: no-repeat;
+        width: 12px;
+        height: 12px;
+        right: 10px;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+
+      &-custom {
+        &__menu--overlay {
+          background: #0f0f0f;
+          border: 1px solid #302f31;
+          margin-top: 0 !important;
+          width: 100%;
+        }
+
+        &__input {
+          height: 36px;
+          border-radius: 0;
+          background: rgba(255, 255, 255, 0.05);
+          border: none;
+          border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+
+          &::placeholder {
+            color: white;
+          }
+
+          &--focused {
+            box-shadow: none;
+          }
+
+          &:focus {
+            outline: none;
+          }
+        }
+      }
+    }
+  }
+
+  .ods-button.-action--primary:disabled {
+    background-color: rgba(#d06cff, 0.6);
+  }
+}
+
+#onfido-sdk-wrapper .onfido-sdk-ui-NavigationBar-disabled {
+  display: none;
+}

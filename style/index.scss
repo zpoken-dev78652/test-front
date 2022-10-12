@@ -1,0 +1,159 @@
+// colors
+$background: #111212;
+$white: #fff;
+$text_grey: rgba(#ffffff, 0.4);
+$mainBG: #111212;
+$black: #0f1010;
+$violet: #d06cff;
+$turquoise: #00e1c8;
+$orang: #ff9800;
+$error: #ff002e;
+$success: #8fff00;
+$bg_input: rgba(255, 255, 255, 0.05);
+$gray: #847a89;
+$blue: blue;
+$backgroundDropDown: rgba(0, 0, 0, 0.1);
+
+// fonts
+$font_josefin: "Montserrat", sans-serif;
+$font_staat: "Staatliches", cursive, cursive;
+$font_montserrat: "Montserrat";
+
+// widths
+$minWidth: 320px;
+$maxWidth: 1420px;
+$maxWidthContainer: 1420px;
+$md1: $maxWidthContainer + 20px;
+$md2: 1440px;
+$md3: 991.98px;
+$md4: 767.98px;
+$md5: 479.98px;
+$mobile: 599.98px;
+$mobileWidth: 768px;
+
+//transition
+$transitionEase: all 0.15s ease;
+
+//mixin
+
+@mixin montserrat-H3() {
+  font-family: "Staatliches";
+  font-style: normal;
+  font-weight: normal;
+  font-size: calc(24px + 26 * (100vw / 1420));
+  color: #ffffff;
+  letter-spacing: 0.15em;
+}
+@mixin wrapper() {
+  width: 100%;
+  min-height: 100%;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+@mixin cursorPointer() {
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+@mixin hoverBackground($startColor) {
+  background: $startColor;
+
+  &:hover {
+    cursor: pointer;
+    background: lighten($startColor, 10);
+  }
+
+  &:focus {
+    background: $startColor;
+  }
+}
+
+@mixin hoverColor($startColor) {
+  color: $startColor;
+
+  &:hover {
+    cursor: pointer;
+    color: lighten($startColor, 10);
+  }
+
+  &:focus {
+    color: $startColor;
+  }
+}
+
+@mixin hoverColorSvg($startColor) {
+  &:hover {
+    svg {
+      path {
+        fill: lighten($startColor, 10);
+      }
+    }
+  }
+}
+
+@mixin container() {
+  max-width: $maxWidthContainer;
+  margin: 0 auto;
+
+  @media (max-width: $md1) {
+    max-width: 1380px;
+    padding: 0 30px;
+  }
+
+  @media (max-width: $md3) {
+    max-width: 750px;
+
+    padding: 0 10px;
+  }
+
+  @media (max-width: $md4) {
+    max-width: none;
+    padding: 0 10px;
+  }
+}
+
+@mixin flexRow {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@mixin bgImg {
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+@mixin btn($bgColor, $hoverColor, $activeColor, $color) {
+  background-color: $bgColor;
+  color: $color;
+
+  &:hover {
+    color: $color;
+    background-color: $hoverColor;
+  }
+
+  &:active {
+    color: $color;
+    background-color: $activeColor;
+  }
+}
+
+.white {
+  color: #fff;
+}
+
+.listingsNotification {
+  display: flex;
+  background-color: red;
+}
+
+.infinite-scroll-mysterybox {
+  overflow-x: hidden !important;
+  overflow-y: hidden !important;
+}

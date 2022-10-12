@@ -1,0 +1,35 @@
+@import '../../../../style/index.scss';
+
+.cardContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background:$bg_input; 
+    padding: 10px;
+}
+
+.rignt {
+    display: flex;
+    flex-direction: column;
+}
+
+.header {
+    font-size: 13px;
+    line-height: 120%;
+    color: rgba(255, 255, 255, 0.2);
+}
+
+.walletValue {
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 120%;
+    color: $violet;
+    span {
+        color: $white;
+    }
+    margin-top: 5px;
+}
+
+.btn{
+    width: 35%;
+}

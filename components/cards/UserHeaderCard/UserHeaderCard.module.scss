@@ -1,0 +1,110 @@
+@import "../../../style/index.scss";
+
+.content {
+  height: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+
+  .avatar {
+    height: 34px;
+    width: 35px;
+
+    img {
+      width: 35px;
+      height: 33px;
+    }
+  }
+
+  .dropdownBtn {
+    color: $white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 13px;
+    border: none;
+    height: 36px;
+    width: 35px;
+    background: rgba(255, 255, 255, 0.05);
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  .rotate {
+    transform: rotate(180deg);
+  }
+}
+
+.buttons {
+  display: flex;
+
+  :first-child {
+    margin-right: 10px;
+  }
+}
+
+.balance {
+  padding: 9px 15px;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 13px;
+  line-height: 16px;
+  text-transform: uppercase;
+  background: rgba(255, 255, 255, 0.05);
+  height: 100%;
+  display: flex;
+  align-items: center;
+
+  .wallet {
+    &:not(:last-of-type) {
+      margin-right: 10px;
+    }
+  }
+
+  .currency {
+    margin-right: 5px;
+  }
+
+  .value {
+    color: #fff;
+  }
+
+  .btn {
+    font-size: 12px;
+  }
+}
+
+.refreshWrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5px;
+  margin: -5px;
+  cursor: pointer;
+
+  svg {
+    animation: loading-balance ease infinite;
+    animation-duration: 0s;
+  }
+
+  &.loading {
+    svg {
+      animation-duration: 1s;
+    }
+  }
+}
+
+@keyframes loading-balance {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(-360deg);
+  }
+}

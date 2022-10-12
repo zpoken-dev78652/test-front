@@ -1,0 +1,73 @@
+@import "../../../../../style/index";
+
+.info {
+  background: rgba($white, 0.1);
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 700;
+  color: $white;
+  padding: 20px;
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+
+  @media (max-width: $mobile) {
+    flex-direction: column;
+  }
+
+  .title {
+    font-size: 13px;
+    line-height: 120%;
+    margin-bottom: 10px;
+  }
+
+  .address {
+    font-size: 11px;
+    line-height: 150%;
+    opacity: 0.5;
+  }
+
+  .btn {
+    margin: 20px 0;
+  }
+
+  .infoContent {
+    width: 100%;
+  }
+
+  .warningMsg {
+    font-weight: 600;
+    font-size: 10px;
+    line-height: 150%;
+    display: flex;
+    align-items: center;
+
+    svg {
+      margin-right: 10px;
+    }
+  }
+
+  .qrWrap {
+    background: rgba($white, 0.1);
+    padding: 10px;
+    height: 140px;
+    width: 140px;
+
+    @media (max-width: $mobile) {
+      height: 254px;
+      width: 254px;
+      margin: 0 auto;
+    }
+  }
+}
+
+.or {
+  margin: 20px 0;
+}
+
+.spiner {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

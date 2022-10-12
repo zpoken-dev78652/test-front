@@ -1,0 +1,232 @@
+@import "../../../style/index.scss";
+
+.mobileMenu {
+  position: relative;
+
+  &.open {
+    .hamburger {
+      height: 16px;
+      width: 16px;
+      .line {
+        left: 50%;
+
+        &:nth-child(1) {
+          top: 50%;
+          transform: translateX(-50%) rotate(45deg);
+        }
+        &:nth-child(2) {
+          top: 50%;
+          transform: translateX(-50%) rotate(-45deg);
+        }
+        &:nth-child(3) {
+          top: 50%;
+          transform: translateX(-50%) rotate(-45deg);
+        }
+      }
+    }
+
+    .contentWrap {
+      left: 0;
+      pointer-events: visible;
+    }
+  }
+
+  .hamburger {
+    height: 15px;
+    width: 16px;
+    position: relative;
+    cursor: pointer;
+    z-index: 3001;
+
+    .line {
+      height: 3px;
+      width: 100%;
+      background-color: #fff;
+      transition: 0.35s cubic-bezier(0.26, 0.1, 0.27, 1.55);
+      position: absolute;
+      left: 0;
+
+      &:nth-child(1) {
+        top: 0;
+      }
+      &:nth-child(2) {
+        top: 6px;
+      }
+      &:nth-child(3) {
+        top: 12px;
+      }
+    }
+
+    &.open {
+      .line {
+        left: 50%;
+
+        &:nth-child(1) {
+          top: 50%;
+          transform: translateX(-50%) rotate(45deg);
+        }
+        &:nth-child(2) {
+          top: 50%;
+          transform: translateX(-50%) rotate(-45deg);
+        }
+        &:nth-child(3) {
+          top: 50%;
+          transform: translateX(-50%) rotate(-45deg);
+        }
+      }
+    }
+  }
+
+  .hamburgerWrap {
+    padding: 20px;
+    position: relative;
+    z-index: 3002;
+  }
+
+  .contentWrap {
+    background: #111213;
+    position: fixed;
+    top: 0;
+    left: 100%;
+    height: var(--fullHeight);
+    width: 100vw;
+    transform-origin: 100% 0;
+    transition: $transitionEase;
+    transform: scale(1);
+    z-index: 3001;
+    pointer-events: none;
+
+    .top {
+      font-family: "Montserrat";
+      font-style: normal;
+      font-weight: 600;
+      font-size: 24px;
+      line-height: 100%;
+      letter-spacing: 0.01em;
+      color: #ffffff;
+      padding: 17px 20px;
+      border-bottom: 1px solid rgba(#c4c4c4, 0.2);
+    }
+
+    .linksWrap {
+      display: flex;
+      flex-direction: column;
+      overflow: auto;
+      height: calc(100% - 59px);
+    }
+
+    .content {
+      position: relative;
+      margin: 0 20px;
+      padding: 30px 0;
+      border-bottom: 1px solid rgba(#c4c4c4, 0.2);
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+
+      &:last-of-type {
+        border-bottom: none;
+      }
+
+      svg {
+        width: 16px;
+        height: 16px;
+        &:first-of-type {
+          margin-right: 10px;
+        }
+      }
+
+      .iconLogo {
+        margin-left: -2px;
+        width: 20px;
+        height: 14px;
+      }
+
+      .link {
+        position: relative;
+        font-family: "Montserrat";
+        font-style: normal;
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 80%;
+        letter-spacing: 0.01em;
+        color: #ffffff;
+        width: 100%;
+        display: flex;
+        align-items: center;
+
+        &:not(:first-child) {
+          margin-top: 30px;
+        }
+      }
+
+      .rightArrow {
+        position: absolute;
+        right: 0;
+        top: 50%;
+        transform: translateY(-50%) rotate(90deg);
+        width: 16px;
+        height: 16px;
+      }
+    }
+
+    .logOut {
+      display: flex;
+      align-items: center;
+      width: 100%;
+      color: #ff002e;
+
+      svg {
+        path {
+          fill: #ff002e;
+        }
+      }
+    }
+  }
+
+  .wallet {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 13px 13px 13px 20px;
+    background: rgba(0, 0, 0, 0.3);
+    margin: 20px;
+    position: relative;
+
+    &::before {
+      content: "";
+      width: 100%;
+      position: absolute;
+      left: 0;
+      bottom: -20px;
+      border-bottom: 1px solid rgba(#c4c4c4, 0.2);
+    }
+
+    .rignt {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .header {
+      font-size: 12px;
+      line-height: 15px;
+      color: $white;
+    }
+
+    .walletValue {
+      font-size: 14px;
+      line-height: 17px;
+      text-transform: uppercase;
+      color: $violet;
+      display: flex;
+      justify-content: space-between;
+
+      span {
+        color: $white;
+        margin-left: 5px;
+      }
+      margin-top: 5px;
+    }
+  }
+}

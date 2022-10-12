@@ -1,0 +1,68 @@
+@import "../../../style/index.scss";
+
+.container {
+  display: flex;
+  align-items: center;
+
+  // > :nth-child(n):not(:last-child) {
+  //   margin-right: 30px;
+  // }
+
+  .link {
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 17px;
+    text-align: center;
+    text-decoration: none;
+    opacity: 0.5;
+    margin-right: 30px;
+    &:hover {
+      color: $white;
+      opacity: 1;
+    }
+  }
+
+  .notification {
+    margin-top: 5px;
+  }
+  .active {
+    @extend .link;
+    color: $white;
+    opacity: 1;
+  }
+
+  > button {
+    width: 109px;
+  }
+}
+
+.soon {
+  background-color: red;
+  font-family: "Staatliches";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 15px;
+  color: $white;
+  padding: 0 5px;
+  margin-left: 5px;
+}
+
+.link {
+  color: white;
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.discord {
+  margin-right: 30px;
+  filter: grayscale(1);
+  transition: $transitionEase;
+
+  &:hover {
+    filter: grayscale(0);
+  }
+}

@@ -1,0 +1,35 @@
+.customWrapper {
+  .datepicker {
+    &.default {
+      position: relative;
+      background-color: transparent;
+
+      .datepicker-wheel {
+        border-color: #302f31;
+      }
+
+      .datepicker-scroll {
+        li {
+          color: #fff;
+          opacity: 0.3;
+          font-family: "Montserrat";
+          font-style: normal;
+          font-weight: 500;
+          font-size: 12px;
+          line-height: 100%;
+          letter-spacing: 0.01em;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+
+          &:nth-child(6) {
+            opacity: 1;
+          }
+        }
+      }
+      .datepicker-viewport {
+        height: 120px;
+      }
+    }
+  }
+}

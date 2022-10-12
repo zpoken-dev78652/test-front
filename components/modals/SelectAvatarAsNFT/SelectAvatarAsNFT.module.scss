@@ -1,0 +1,10 @@
+@import "../../../style/index.scss";
+
+.modal {
+  width: calc(100% - 60px);
+}
+
+.content {
+  padding: 20px;
+  height: 100%;
+}

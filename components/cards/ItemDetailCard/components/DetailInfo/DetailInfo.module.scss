@@ -1,0 +1,52 @@
+@import "../../../../../style/index";
+
+.detailsTab {
+  display: flex;
+  flex-direction: column;
+  .descriptions {
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 170%;
+    letter-spacing: -0.01em;
+    color: $white;
+    margin-top: 20px;
+  }
+}
+
+.nameLink {
+  color: #d06cff;
+
+  &:hover {
+    color: #dd95ff;
+  }
+
+  &:active {
+    color: #9748bc;
+  }
+}
+
+.detailList {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+
+  .item {
+    &:not(:last-of-type) {
+      margin-bottom: 15px;
+    }
+  }
+
+  .detailLink {
+    text-decoration-line: underline;
+    color: $violet;
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 500;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}

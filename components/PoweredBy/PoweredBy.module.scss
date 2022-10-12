@@ -1,0 +1,51 @@
+@import "../../style/index.scss";
+
+.desc {
+  display: flex;
+  justify-content: space-between;
+  // margin-bottom: 20px;
+
+  .icon {
+    display: flex;
+    align-items: center;
+    span {
+      width: 35px;
+      height: 24px;
+      background: rgba(255, 255, 255, 0.05);
+      display: flex;
+      align-items: center;
+      padding: 0 5px;
+      margin-left: 5px;
+
+      @media (max-width: $mobile) {
+        width: 35px;
+        padding: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+    }
+  }
+  .title {
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 600;
+    line-height: 110%;
+    color: $white;
+    font-size: 13px;
+    padding: 5px;
+    background: rgba(255, 255, 255, 0.05);
+    display: flex;
+    align-items: center;
+
+    span {
+      margin-left: 5px;
+      font-style: bold;
+      font-weight: 800;
+    }
+
+    @media (max-width: $mobile) {
+      font-size: 10px;
+    }
+  }
+}

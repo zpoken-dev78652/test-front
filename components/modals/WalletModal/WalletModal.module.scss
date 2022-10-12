@@ -1,0 +1,15 @@
+@import "../../../style/index";
+
+.walletModal {
+  height: 100%;
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+
+.spiner {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30px;
+}

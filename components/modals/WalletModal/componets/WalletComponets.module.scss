@@ -1,0 +1,102 @@
+@import "../../../../style/index";
+
+.contentOnfido {
+  height: 100%;
+  padding: 20px;
+  overflow: hidden;
+  .formWrapp {
+    height: calc(100% - 105px - 40px);
+    margin-top: 40px;
+
+    @media (max-width: $mobile) {
+      height: calc(100% - 153px - 40px);
+    }
+  }
+}
+
+.onfidoText,
+.onfidoPandingText {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 10px;
+  line-height: 140%;
+  color: rgba(255, 255, 255, 0.3);
+  display: flex;
+
+  .icon {
+    width: 95px;
+    flex: none;
+  }
+
+  .contentIdentity {
+    padding: 0;
+    margin-left: 30px;
+  }
+
+  .title {
+    font-family: "Staatliches";
+    font-style: normal;
+    font-weight: normal;
+    font-size: 25px;
+    line-height: 110%;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: $white;
+  }
+
+  .desc {
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 13px;
+    line-height: 150%;
+    color: $white;
+    opacity: 0.5;
+  }
+}
+
+.onfidoPandingText {
+  height: 100%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+  .content {
+    margin-left: 0;
+    margin-top: 40px;
+  }
+
+  .title {
+    margin: 0 auto 20px;
+    max-width: 305px;
+  }
+}
+
+.onfido {
+  margin-top: 30px;
+}
+
+.onfidoWrapper {
+  overflow-y: auto;
+  max-height: 100%;
+}
+
+.wallets {
+  padding: 20px;
+  height: 100%;
+  overflow: auto;
+
+  .walletsTabs {
+    margin-top: 30px;
+
+    @media (max-width: $mobile) {
+      margin-top: 10px;
+    }
+  }
+
+  .wrapperContent {
+    margin-top: 20px;
+  }
+}

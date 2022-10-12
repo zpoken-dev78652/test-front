@@ -1,0 +1,155 @@
+@import "../../../style/index";
+
+.container {
+  @include container();
+
+  .chronicleStore {
+    margin-top: 50px;
+
+    .content {
+      &:not(:first-of-type) {
+        margin-top: 30px;
+      }
+    }
+
+    @media (max-width: $mobile) {
+      margin-top: 30px;
+    }
+  }
+
+  .more {
+    margin: 0 auto;
+    margin-top: 40px;
+    width: 200px;
+  }
+
+  @media (max-width: $mobile) {
+    padding: 0 20px;
+  }
+}
+
+.buttonsConfirm {
+  display: flex;
+  margin-top: 30px;
+
+  :first-child {
+    margin-right: 20px;
+  }
+
+  @media (max-width: $mobile) {
+    padding: 20px;
+    margin: 0;
+    border-top: 1px solid #302f31;
+    gap: 10px;
+
+    :first-child {
+      margin-right: 0;
+    }
+  }
+}
+
+.banner {
+  margin: 0 -30px;
+}
+
+.infoWrap {
+  color: $white;
+  margin-top: 30px;
+  display: grid;
+  grid-template-columns: 0.6fr 0.4fr;
+  grid-gap: 20px;
+  align-items: flex-start;
+
+  @media (max-width: $mobile) {
+    grid-template-columns: 1fr;
+  }
+
+  .logo {
+    border: 2px solid $turquoise;
+    width: 120px;
+    height: 120px;
+    position: absolute;
+    left: 0;
+    top: -60px;
+  }
+
+  .infoContent {
+    position: relative;
+  }
+
+  .content {
+    padding-left: 140px;
+
+    .title {
+      font-family: "Staatliches";
+      font-style: normal;
+      font-weight: 400;
+      font-size: 36px;
+      line-height: 70%;
+      letter-spacing: 0.15em;
+    }
+
+    .subTitle {
+      font-family: "Montserrat";
+      font-style: normal;
+      font-weight: 600;
+      font-size: 13px;
+      line-height: 120%;
+      color: #ffffff;
+      display: flex;
+      align-items: center;
+      margin-top: 10px;
+
+      svg {
+        margin-left: 5px;
+      }
+    }
+  }
+
+  .desc {
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 13px;
+    line-height: 150%;
+    margin-top: 39px;
+  }
+}
+
+.socials {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: flex-end;
+  width: 100%;
+
+  .social {
+    width: calc(50% - 10px);
+
+    .title {
+      display: flex;
+      align-items: center;
+      font-family: "Staatliches";
+      font-style: normal;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 80%;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      margin-bottom: 6px;
+
+      svg {
+        margin-right: 6px;
+      }
+    }
+
+    .link {
+      font-family: "Montserrat";
+      font-style: normal;
+      font-weight: 600;
+      font-size: 13px;
+      line-height: 150%;
+      display: block;
+    }
+  }
+}

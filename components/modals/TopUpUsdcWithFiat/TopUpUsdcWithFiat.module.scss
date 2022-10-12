@@ -1,0 +1,51 @@
+@import "../../../style/index.scss";
+
+.container {
+  height: 100%;
+  overflow: hidden;
+}
+
+.content {
+  height: calc(100% - 92px);
+  overflow: auto;
+  padding: 0 20px;
+}
+
+.desc {
+  font-size: 13px;
+  line-height: 150%;
+  text-align: center;
+  letter-spacing: -0.01em;
+  margin-top: 120px;
+  margin-bottom: 20px;
+  color: $white;
+
+  a {
+    color: $violet;
+    text-decoration: underline;
+  }
+}
+
+.btn {
+  padding: 30px 20px;
+  position: relative;
+  display: flex;
+
+  button:first-child {
+    margin-right: 20px;
+  }
+
+  &:before {
+    position: absolute;
+    content: "";
+    width: 150%;
+    left: -20px;
+    top: 0;
+    height: 1px;
+    background-color: rgba($white, 0.2);
+  }
+}
+
+.icon {
+  transform: rotate(180deg);
+}

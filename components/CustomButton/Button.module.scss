@@ -1,0 +1,135 @@
+@import "../../style/index.scss";
+
+.btn {
+  font-family: "Staatliches";
+  width: 100%;
+  height: 32px;
+  padding: 10px 15px;
+  text-align: center;
+  font-size: 14px;
+  line-height: 70%;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: $white;
+  background: none;
+  box-shadow: none;
+  outline: none;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: $transitionEase;
+  cursor: pointer;
+
+  @media (max-width: $mobile) {
+    height: 36px;
+  }
+
+  svg {
+    width: 12px;
+    height: 12px;
+
+    & + span {
+      margin-left: 10px;
+    }
+  }
+
+  &.withIcon {
+    justify-content: space-between;
+  }
+
+  &.disable {
+    opacity: 0.6;
+  }
+
+  &.violet {
+    @include btn(#d06cff, #dd95ff, #9748bc, $white);
+  }
+
+  &.transparent {
+    @include btn(
+      rgba(255, 255, 255, 0.1),
+      rgba(255, 255, 255, 0.2),
+      rgba(255, 255, 255, 0.05),
+      $white
+    );
+  }
+
+  &.red {
+    @include btn(#ff002e, #ff5070, #a9001e, $white);
+  }
+
+  &.turquoise {
+    @include btn(#00e1c8, #9afff4, #00ae9a, $black);
+  }
+
+  &.link {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    color: #d06cff;
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 100%;
+    padding: 0;
+    margin: 0;
+    text-transform: none;
+    letter-spacing: normal;
+    width: auto;
+    height: auto;
+
+    span {
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+
+    svg {
+      flex: none;
+      margin-left: 5px;
+      path {
+        fill: #d06cff;
+      }
+    }
+
+    &:hover {
+      color: #dd95ff;
+      svg {
+        path {
+          fill: #dd95ff;
+        }
+      }
+    }
+
+    &:active {
+      color: #9748bc;
+      svg {
+        path {
+          fill: #9748bc;
+        }
+      }
+    }
+  }
+
+  &.simple {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    color: $white;
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 20px;
+    padding: 0;
+    margin: 0;
+    text-transform: none;
+    letter-spacing: normal;
+    width: auto;
+    height: auto;
+  }
+}

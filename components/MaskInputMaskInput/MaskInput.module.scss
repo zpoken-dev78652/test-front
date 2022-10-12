@@ -1,0 +1,88 @@
+@import "../../style/index.scss";
+
+.priceInput {
+  &.isError {
+    .input {
+      background: rgba(255, 0, 46, 0.05);
+      border-bottom: 1px solid #ff002e;
+    }
+
+    .message {
+      color: #ff002e;
+    }
+  }
+
+  .input {
+    background: rgba(255, 255, 255, 0.05);
+    border: none;
+    border-bottom: 1px solid rgba(#fff, 0.2);
+    display: flex;
+    align-items: center;
+    padding: 10px;
+
+    .startTest {
+      font-family: Montserrat;
+      font-style: normal;
+      font-weight: 600;
+      font-size: 13px;
+      line-height: 16px;
+      color: #d06cff;
+    }
+
+    input {
+      border: none;
+      background-color: transparent;
+      color: #ffffff;
+      font-style: normal;
+      font-weight: 600;
+      font-size: 13px;
+      line-height: 16px;
+      width: 100%;
+
+      &:focus {
+        outline: none;
+      }
+    }
+  }
+
+  .content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+
+  .message {
+    font-weight: 600;
+    font-size: 13px;
+    line-height: 16px;
+    text-align: right;
+    color: rgba(#ffffff, 0.5);
+
+    @media (max-width: $mobile) {
+      font-size: 12px;
+      line-height: 15px;
+    }
+  }
+
+  .title {
+    font-family: "Staatliches";
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 110%;
+    display: flex;
+    align-items: center;
+    letter-spacing: 0.24em;
+    color: #ffffff;
+  }
+}
+
+.tipError {
+  margin-top: 20px;
+  font: $font_josefin;
+  color: $error;
+  @media (max-width: $mobile) {
+    margin-top: 10px;
+  }
+}

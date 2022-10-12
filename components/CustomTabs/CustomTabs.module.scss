@@ -1,0 +1,41 @@
+@import "../../style/index.scss";
+
+.tabs {
+  display: flex;
+  position: relative;
+  padding-bottom: 13px;
+  width: 100%;
+  border-bottom: 1px solid rgba(#fff, 0.2);
+  user-select: none;
+
+  .tab {
+    font-family: "Staatliches";
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 17px;
+    letter-spacing: 0.15em;
+    color: #ffffff;
+    text-align: center;
+    cursor: pointer;
+    opacity: 0.5;
+    transition: $transitionEase;
+
+    &.isActive {
+      opacity: 1;
+    }
+
+    &.disable {
+      cursor: not-allowed;
+    }
+  }
+
+  .indicator {
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    height: 2px;
+    background-color: #d06cff;
+    transition: $transitionEase;
+  }
+}

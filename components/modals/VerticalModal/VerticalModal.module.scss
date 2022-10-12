@@ -1,0 +1,44 @@
+@import "../../../style/index";
+
+.verticalModal {
+  display: flex;
+  flex-direction: column;
+  height: var(--fullHeight);
+  width: 540px;
+  border-left: 1px solid #302f31;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(60px);
+
+  @supports not (backdrop-filter: blur(60px)) {
+    background: #292a2a;
+  }
+
+  @media (max-width: $mobile) {
+    width: 100vw;
+  }
+
+  .header {
+    font-family: "Staatliches";
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 30px;
+    letter-spacing: 0.15em;
+    color: #fff;
+    padding: 20px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    display: flex;
+    align-items: center;
+
+    .arrow {
+      margin-right: 20px;
+      cursor: pointer;
+    }
+  }
+
+  .content {
+    max-height: calc(var(--fullHeight) - 69px);
+    overflow: auto;
+    height: 100%;
+  }
+}

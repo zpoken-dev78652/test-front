@@ -1,0 +1,53 @@
+@import "../../style/index.scss";
+
+.container {
+  position: relative;
+}
+
+.label {
+  width: 100%;
+  position: relative;
+  font-family: $font_staat;
+  font-size: 18px;
+  line-height: 1.1;
+  letter-spacing: 0.24em;
+  font-feature-settings: "pnum" on, "lnum" on;
+  color: $white;
+  margin-bottom: 10px;
+}
+
+.selectField {
+  margin-top: 10px;
+}
+
+.tipError {
+  position: absolute;
+  font-size: 11px;
+  line-height: 150%;
+  opacity: 0.9;
+  padding-top: 3px;
+  color: $error;
+}
+
+.error {
+  .label {
+    color: $error;
+  }
+  :global {
+    .react-select__control {
+      background: lighten($error, 20);
+      border: solid 1px $error;
+    }
+  }
+}
+
+.disabled {
+  .label {
+    color: lighten(red, 15);
+  }
+  .input {
+    background-color: $white;
+    border-color: lighten(red, 40);
+    color: lighten(red, 40);
+  }
+}

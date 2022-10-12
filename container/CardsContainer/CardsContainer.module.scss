@@ -1,0 +1,124 @@
+@import "../../style/index.scss";
+
+.container {
+  display: flex;
+  flex-direction: column;
+  .header {
+    display: grid;
+    justify-content: space-between;
+    grid-template-columns: auto 1fr;
+    align-items: center;
+    margin-bottom: 30px;
+
+    @media (max-width: $mobile) {
+      grid-template-columns: 1fr;
+    }
+
+    h3 {
+      font-family: "Staatliches";
+      font-style: normal;
+      font-weight: normal;
+      font-size: 36px;
+      line-height: 100%;
+      letter-spacing: 0.15em;
+      color: #ffffff;
+
+      @media (max-width: $mobile) {
+        font-size: 20px;
+        line-height: 110%;
+      }
+    }
+
+    .filterTogles {
+      display: none;
+
+      @media (max-width: $mobile) {
+        display: flex;
+        color: #fff;
+        gap: 20px;
+        justify-content: flex-end;
+
+        svg {
+          margin-left: 10px;
+        }
+      }
+    }
+
+    .filterIcon {
+      width: 16px;
+      height: 16px;
+      transform: rotate(-180deg);
+      transition: $transitionEase;
+
+      &.isOpen {
+        transform: rotate(0);
+      }
+    }
+
+    .filterBtn {
+      display: flex;
+      align-items: center;
+      font-family: "Staatliches";
+      font-style: normal;
+      font-weight: normal;
+      font-size: 14px;
+      line-height: 120%;
+      text-align: center;
+      letter-spacing: 0.15em;
+    }
+
+    .actions {
+      // line-height: 70%;
+      flex: 1 1 60%;
+    }
+
+    @media only screen and (max-width: 1280px) {
+      align-items: flex-start;
+    }
+
+    @media (max-width: $mobile) {
+      align-items: center;
+      margin-bottom: 20px;
+    }
+  }
+}
+
+.buttons {
+  display: flex;
+  width: 100%;
+  justify-content: flex-end;
+
+  @media only screen and (max-width: 1280px) {
+    flex-wrap: wrap;
+  }
+
+  @media (max-width: $mobile) {
+    grid-column: 1/3;
+    width: 100%;
+    flex-direction: column;
+  }
+}
+
+.btn {
+  max-width: 193px;
+  width: 100%;
+  &:not(:first-of-type) {
+    margin-left: 8px;
+  }
+
+  @media only screen and (max-width: 1280px) {
+    min-width: 160px;
+    margin-top: 8px;
+  }
+
+  @media (max-width: $mobile) {
+    min-width: none;
+    max-width: none;
+    width: 100%;
+    margin-top: 0px;
+
+    &:not(:first-of-type) {
+      margin-left: 0;
+    }
+  }
+}

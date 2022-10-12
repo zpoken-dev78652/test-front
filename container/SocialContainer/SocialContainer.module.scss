@@ -1,0 +1,109 @@
+@import "../../style/index.scss";
+
+.or {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 20px 0;
+  font-family: "Josefin Sans";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 12px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  color: #ffffff;
+  opacity: 0.5;
+  text-transform: uppercase;
+
+  .line {
+    flex: 0 0 45%;
+    border: 1px solid #ffffff;
+
+    @media (max-width: $mobile) {
+      display: none;
+    }
+  }
+
+  @media (max-width: $mobile) {
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 100%;
+    margin: 0;
+    opacity: 1;
+    text-transform: initial;
+  }
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 10px;
+
+  @media (max-width: $mobile) {
+    margin-top: 15px;
+    flex-direction: row;
+  }
+}
+
+.google,
+.apple,
+.facebook {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: 8px 10px;
+  font-family: "Staatliches";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 70%;
+  /* identical to box height, or 10px */
+
+  text-align: center;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+
+  &:hover {
+    cursor: pointer;
+  }
+
+  span {
+    text-align: center;
+    width: 100%;
+  }
+
+  @media (max-width: $mobile) {
+    padding: 11px 10px;
+    height: 38px;
+  }
+}
+
+.google {
+  background: $white;
+  color: $mainBG;
+}
+
+.apple {
+  background: $white;
+  color: $mainBG;
+}
+
+.facebook {
+  background: #1778f2;
+  color: $white;
+  padding-left: 5px;
+  @media (max-width: $mobile) {
+    padding-left: 11px;
+  }
+}
+
+.icon {
+  width: 16px;
+  height: 16px;
+  margin-bottom: 0;
+}

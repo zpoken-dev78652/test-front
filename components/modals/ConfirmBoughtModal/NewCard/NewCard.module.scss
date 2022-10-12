@@ -1,0 +1,21 @@
+@import "../../../../style/index.scss";
+
+.cardContainer {
+  .checkbox {
+    margin-top: 15px;
+    width: 100%;
+    margin-bottom: 0;
+
+    div {
+      width: 100%;
+    }
+
+    form > div {
+      flex: 0 0 100%;
+    }
+  }
+
+  .desc {
+    margin-bottom: 20px;
+  }
+}

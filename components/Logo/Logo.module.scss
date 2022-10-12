@@ -1,0 +1,19 @@
+@import '../../style/index.scss';
+
+.container {
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    width: 107px;
+    font-weight: 300;
+
+    &:hover{
+        cursor: pointer;
+    }
+}
+
+.min{
+    &:hover{
+        cursor: pointer;
+    }
+}

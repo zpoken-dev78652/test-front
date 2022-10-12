@@ -1,0 +1,128 @@
+@import "../../../style/index.scss";
+
+.wrapper {
+  background: rgba(255, 255, 255, 0.1);
+  box-shadow: 0px 46.5895px 103.532px rgba(0, 0, 0, 0.45),
+    0px 19.464px 43.253px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(50px);
+  padding: 40px;
+  border-radius: 0;
+  width: 480px;
+
+  @supports not (backdrop-filter: blur(52px)) {
+    background: #292a2a;
+  }
+
+  @media (max-width: $mobile) {
+    max-width: calc(100% - 60px);
+    margin: 0 auto;
+    padding: 30px 20px 20px;
+    width: 100vw;
+  }
+
+  .top {
+    display: flex;
+    margin-bottom: 30px;
+
+    @media (max-width: $mobile) {
+      flex-direction: column;
+    }
+  }
+
+  .iconWrap {
+    svg {
+      width: 90px;
+    }
+    @media (max-width: $mobile) {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 30px;
+    }
+  }
+
+  .content {
+    display: flex;
+    margin-left: 30px;
+    flex-direction: column;
+    color: $white;
+
+    @media (max-width: $mobile) {
+      margin-left: 0;
+      text-align: center;
+    }
+  }
+
+  .title {
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 120%;
+    color: $white;
+    margin-bottom: 10px;
+
+    @media (max-width: $mobile) {
+      font-size: 20px;
+    }
+  }
+
+  .desc {
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 170%;
+    letter-spacing: -0.04em;
+    color: $white;
+
+    a {
+      color: $violet;
+
+      &:hover {
+        opacity: 0.7;
+      }
+    }
+
+    @media (max-width: $mobile) {
+      font-size: 12px;
+      line-height: 160%;
+    }
+  }
+
+  .listWrap {
+    margin-top: 20px;
+  }
+
+  .listItem {
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 13px;
+    line-height: 120%;
+    color: $white;
+
+    &:not(:first-of-type) {
+      margin-top: 10px;
+    }
+  }
+
+  .listTitle {
+    opacity: 0.5;
+  }
+
+  .listWrapper {
+    .titleList {
+      margin-top: 20px;
+    }
+
+    ul {
+      padding-left: 15px;
+      margin: 0;
+    }
+
+    li {
+      font-size: 12px;
+      color: rgba($white, 0.5);
+    }
+  }
+}

@@ -1,0 +1,117 @@
+@import "../../style/index";
+
+.accordionWrapper {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 700;
+  color: $white;
+  background: rgba($white, 0.1);
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+
+  &.lastClose {
+    margin-bottom: 0;
+  }
+
+  .content {
+    display: flex;
+  }
+
+  .icon {
+    margin-right: 10px;
+  }
+
+  .info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    .title {
+      font-size: 13px;
+      line-height: 120%;
+
+      @media (max-width: $mobile) {
+        font-size: 10px;
+      }
+    }
+
+    .subTitle {
+      font-size: 11px;
+      line-height: 110%;
+      opacity: 0.5;
+      margin-top: 5px;
+
+      @media (max-width: $mobile) {
+        font-size: 10px;
+      }
+    }
+  }
+
+  .balance {
+    text-align: right;
+
+    .currency {
+      font-size: 13px;
+      line-height: 120%;
+
+      @media (max-width: $mobile) {
+        font-size: 10px;
+      }
+    }
+
+    .value {
+      font-size: 24px;
+      line-height: 100%;
+      margin: 0;
+      margin-top: 5px;
+
+      @media (max-width: $mobile) {
+        font-size: 13px;
+      }
+    }
+  }
+
+  .btn {
+    height: 50px;
+    width: 50px;
+    background: rgba($white, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 10px;
+    cursor: pointer;
+    outline: none;
+    border: none;
+
+    @media (max-width: $mobile) {
+      height: 30px;
+      width: 30px;
+    }
+
+    & > div {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+}
+
+.wrapperCollaps {
+  overflow: hidden;
+  max-height: calc(100% - 200px);
+
+  &.lastClose {
+    margin-bottom: 20px;
+    max-height: calc(100% - 220px);
+
+    @media (max-width: $mobile) {
+      max-height: calc(100% - 170px);
+    }
+  }
+
+  @media (max-width: $mobile) {
+    max-height: calc(100% - 160px);
+  }
+}

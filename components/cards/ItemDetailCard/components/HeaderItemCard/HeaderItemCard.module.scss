@@ -1,0 +1,197 @@
+@import "../../../../../style/index.scss";
+
+.boughtDesc {
+  display: flex;
+  flex-direction: column;
+
+  border: 1px solid rgba(#ffffff, 0.1);
+  padding: 20px;
+
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin-bottom: 20px;
+    .name {
+      font-family: "Montserrat";
+      font-style: normal;
+      font-weight: 600;
+      font-size: 36px;
+      line-height: 100%;
+      color: $white;
+    }
+    .price {
+      font-family: "Montserrat";
+      font-style: normal;
+      font-weight: 600;
+      font-size: 16px;
+      line-height: 100%;
+      flex: none;
+
+      span {
+        font-size: 20px;
+        color: $white;
+      }
+    }
+  }
+}
+
+.topPriceIcon {
+  width: 12px;
+  height: 12px;
+}
+
+.auctionInfoList {
+  margin-top: 10px;
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 10px;
+  line-height: 170%;
+  color: $white;
+  opacity: 0.5;
+
+  .auctionInfo {
+    padding-left: 15px;
+    position: relative;
+
+    &:not(:last-of-type) {
+      margin-bottom: 5px;
+    }
+
+    &::before {
+      border-radius: 50%;
+      content: "";
+      left: 6px;
+      top: 50%;
+      transform: translateY(-50%);
+      position: absolute;
+      height: 3px;
+      width: 3px;
+      background-color: rgba($white, 0.5);
+    }
+  }
+}
+
+.priceAuction {
+  color: $white;
+  text-align: right;
+
+  .title {
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 10px;
+    line-height: 100%;
+    margin-bottom: 0;
+
+    &.noTopBid {
+      opacity: 0.5;
+      max-width: 120px;
+    }
+  }
+
+  .fullPrice {
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 100%;
+    white-space: pre;
+  }
+}
+
+.topPrice {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+
+  .price {
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 600;
+    flex: none;
+    margin-left: 10px;
+    font-size: 13px;
+    line-height: 100%;
+
+    span {
+      color: $white;
+    }
+
+    .triceTitle {
+      color: rgba(255, 255, 255, 0.5);
+    }
+  }
+}
+.btns {
+  display: flex;
+  gap: 10px;
+}
+@media (max-width: $mobile) {
+  .boughtDesc {
+    border: none;
+    padding: 20px 0 0 0;
+    .header {
+      margin-bottom: 0px;
+      .name {
+        font-size: 20px;
+        line-height: 100%;
+      }
+      .price {
+        font-size: 14px;
+        line-height: 97%;
+        span {
+          font-size: 14px;
+        }
+      }
+    }
+  }
+  .btns {
+    margin-top: 20px;
+  }
+}
+
+.itemInput {
+  margin-bottom: 20px;
+}
+
+.soldOutBtn {
+  border: 2px solid #ff002e;
+  font-family: "Staatliches";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 76%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: #ff002e;
+  width: 100%;
+  height: 32px;
+}
+
+.tipError {
+  margin-top: 20px;
+  font: $font_josefin;
+  color: $error;
+
+  @media (max-width: $mobile) {
+    margin-top: 10px;
+  }
+}
+
+@media (max-width: $mobile) {
+  .isThreeBtn {
+    flex-wrap: wrap;
+
+    button {
+      &:not(:first-of-type) {
+        width: calc(50% - 5px);
+      }
+    }
+  }
+}

@@ -1,0 +1,86 @@
+@import "../../../style/index.scss";
+
+.form {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  .input {
+    flex: 1 1 auto;
+    .tipError {
+      margin-top: 20px;
+      font: $font_josefin;
+      color: $error;
+    }
+
+    .inputCheckbox {
+      flex: none;
+    }
+
+    &.checkbox {
+      a {
+        display: inline-flex;
+        color: $turquoise;
+        text-decoration: underline;
+
+        &:hover {
+          cursor: pointer;
+        }
+      }
+
+      & > div {
+        margin-top: 0;
+      }
+    }
+
+    .label {
+      margin-left: 10px;
+
+      font-family: "Montserrat";
+      font-style: normal;
+      font-weight: normal;
+      font-size: 14px;
+      line-height: 120%;
+      /* or 17px */
+      color: #ffffff;
+
+      span {
+        color: $turquoise;
+        text-decoration: underline;
+
+        &:hover {
+          cursor: pointer;
+        }
+      }
+    }
+  }
+
+  .button {
+    margin-top: 20px;
+  }
+
+  ul {
+    margin-top: 30px;
+    margin-bottom: 0;
+
+    @media (max-width: $mobile) {
+      margin-top: 30px;
+    }
+
+    li {
+      font-family: "Montserrat";
+      font-style: normal;
+      font-weight: 600;
+      font-size: 12px;
+      line-height: 18px;
+
+      color: #ffffff;
+
+      margin-left: -20px;
+
+      @media (max-width: $mobile) {
+        font-size: 10px;
+        line-height: 150%;
+      }
+    }
+  }
+}

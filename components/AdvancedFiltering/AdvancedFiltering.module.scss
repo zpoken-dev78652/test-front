@@ -1,0 +1,184 @@
+@import "../../style/index.scss";
+.filters {
+  margin-left: 0;
+  // flex: 0 0 25%;
+  width: 100%;
+
+  .sorts,
+  .theme {
+    display: flex;
+    flex-direction: column;
+
+    border-top: 1px solid rgba(#ffffff, 0.2);
+
+    .sortsList {
+      display: flex;
+      flex-direction: column;
+      margin: -20px 0;
+      .list {
+        padding: 20px 0;
+      }
+    }
+
+    .sortsHeader {
+      display: flex;
+      justify-content: space-between;
+
+      margin: 20px 0 5px 0;
+
+      .title,
+      .icon {
+        font-family: Staatliches;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 17px;
+        letter-spacing: 0.15em;
+        color: $white;
+      }
+    }
+  }
+  .headers {
+    display: flex;
+    justify-content: space-between;
+
+    // border-bottom: 1px solid rgba(#ffffff, 0.2);
+    padding: 20px 0;
+
+    .header {
+      font-family: "Staatliches";
+      font-style: normal;
+      font-weight: normal;
+      font-size: 24px;
+      line-height: 120%;
+      text-align: center;
+      letter-spacing: 0.15em;
+      color: $white;
+
+      @media (max-width: $mobile) {
+        font-size: 20px;
+        line-height: 110%;
+      }
+    }
+
+    .reset {
+      font-family: "Staatliches";
+      font-style: normal;
+      font-weight: normal;
+      font-size: 16px;
+      line-height: 120%;
+      text-align: center;
+      letter-spacing: 0.15em;
+      color: $white;
+      opacity: 0.5;
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+.themeList {
+  margin-bottom: 30px;
+}
+
+.refresh,
+.icon,
+.sortsHeader {
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.profile,
+.store {
+  padding: 0 20px;
+}
+
+.franchises {
+  display: flex;
+  flex-wrap: wrap;
+  padding-bottom: 20px;
+  width: 100%;
+
+  .franchise {
+    width: auto;
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 13px;
+    line-height: 16px;
+    text-align: center;
+    color: #ffffff;
+    opacity: 0.5;
+    padding: 5px 10px;
+    background: rgba(255, 255, 255, 0.1);
+    margin: 5px 5px 0 0;
+
+    @include hoverBackground(rgba(255, 255, 255, 0.1));
+  }
+
+  .selected {
+    @include hoverBackground($violet);
+    color: #ffffff;
+    opacity: 1;
+  }
+}
+
+.filterTogles {
+  display: flex;
+  gap: 20px;
+  justify-content: flex-end;
+  color: #fff;
+  opacity: 0.5;
+
+  &:hover {
+    transition: all 0.15s ease;
+    opacity: 1;
+  }
+
+  svg {
+    width: 12px;
+    height: 12px;
+    margin-left: 10px;
+  }
+
+  @media (max-width: $mobile) {
+    opacity: 1;
+
+    svg {
+      width: 16px;
+      height: 16px;
+    }
+  }
+}
+
+.filterIcon {
+  transform: rotate(-180deg);
+  transition: $transitionEase;
+
+  &.isOpen {
+    transform: rotate(0);
+  }
+}
+
+.filterBtn {
+  display: flex;
+  align-items: center;
+  font-family: "Staatliches";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 120%;
+  text-align: center;
+  letter-spacing: 0.15em;
+  cursor: pointer;
+
+  &:last-of-type {
+    display: none;
+
+    @media (max-width: $mobile) {
+      display: flex;
+    }
+  }
+}

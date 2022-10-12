@@ -1,0 +1,59 @@
+@import "./index.scss";
+
+.customToastify {
+  &.Toastify__toast-container {
+    width: auto;
+    max-width: 241px;
+  }
+
+  .Toastify__toast-body {
+    padding: 0;
+    font-family: "Staatliches";
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 17px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+  }
+
+  .Toastify__toast-icon {
+    width: auto;
+
+    svg {
+      width: 12px;
+      height: 12px;
+    }
+  }
+
+  .Toastify__toast-theme--colored {
+    &.Toastify__toast--success {
+      background: $success;
+      color: $black;
+      svg {
+        path {
+          fill: #111212;
+        }
+      }
+    }
+
+    &.Toastify__toast--error {
+      background: $error;
+      svg {
+        path {
+          fill: white;
+        }
+      }
+    }
+
+    &.Toastify__toast {
+      padding: 10px 20px;
+      min-height: auto;
+      border-radius: 0;
+
+      .Toastify__close-button {
+        display: none;
+      }
+    }
+  }
+}

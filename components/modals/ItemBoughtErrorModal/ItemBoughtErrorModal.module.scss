@@ -1,0 +1,23 @@
+@import "../../../style/index.scss";
+
+.buttons {
+  display: flex;
+
+  @media (max-width: $mobile) {
+    flex-direction: column;
+  }
+
+  button {
+    @media (max-width: $mobile) {
+      height: 40px;
+    }
+
+    &:nth-child(2) {
+      margin-left: 20px;
+      @media (max-width: $mobile) {
+        margin-left: 0;
+        margin-top: 10px;
+      }
+    }
+  }
+}

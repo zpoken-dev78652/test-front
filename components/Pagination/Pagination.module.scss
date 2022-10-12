@@ -1,0 +1,68 @@
+@import "../../style/index.scss";
+
+.pagination {
+    display: flex;
+    justify-content: space-between;
+
+    .page_buttons {
+        background: rgba($white, 0.05);
+        padding: 6px 14px;
+        height: 36px;
+        display: flex;
+
+        .value,
+        .netxBtn,
+        .prevBtn {
+            &:hover {
+                cursor: pointer;
+            }
+        }
+
+        .value,
+        .dots,
+        .netxBtn,
+        .prevBtn {
+            align-self: center;
+            display: inline-block;
+            padding: 0;
+            margin: 0;
+            outline: none;
+            background: transparent;
+            border: none;
+            font-weight: normal;
+            transition: all ease-in-out 0.3s;
+            height: 100%;
+            font-weight: 600;
+            font-size: 13px;
+            line-height: 110%;
+        }
+        .value,
+        .dots {
+            color: $white;
+            padding: 0 15px;
+            border-left: 1px solid rgba($white, 0.05);
+        }
+
+        .dots {
+            padding-top: 6px;
+        }
+        .prevBtn {
+            padding: 0 15px 0 0;
+            svg {
+                transform: rotate(270deg);
+            }
+        }
+        .netxBtn {
+            padding: 0 0 0 15px;
+            border-left: 1px solid rgba($white, 0.05);
+            svg {
+                transform: rotate(90deg);
+            }
+        }
+        .selected {
+            height: 36px;
+            background: rgba($white, 0.1);
+            padding: 0 15px;
+        }
+    }
+}

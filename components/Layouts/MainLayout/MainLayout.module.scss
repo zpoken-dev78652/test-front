@@ -1,0 +1,44 @@
+@import "../../../style/index.scss";
+
+.container {
+  .content {
+    min-height: calc(var(--fullHeight) - 72px - 218px - 50px);
+    flex-grow: 1;
+
+    @media (max-width: $mobile) {
+      min-height: calc(var(--fullHeight) - 56px - 316px - 50px);
+    }
+
+    &.noFooter {
+      min-height: calc(var(--fullHeight) - 72px);
+
+      @media (max-width: $mobile) {
+        min-height: calc(var(--fullHeight) - 56px);
+      }
+    }
+  }
+
+  &.noSpace {
+    .footer {
+      margin-top: 0;
+    }
+
+    .content {
+      min-height: calc(var(--fullHeight) - 72px - 218px);
+      flex-grow: 1;
+
+      @media (max-width: $mobile) {
+        min-height: calc(var(--fullHeight) - 56px - 316px);
+      }
+    }
+  }
+
+  .footer {
+    margin-top: 50px;
+  }
+
+  &.openMenu {
+    overflow: hidden;
+    height: var(--fullHeight);
+  }
+}

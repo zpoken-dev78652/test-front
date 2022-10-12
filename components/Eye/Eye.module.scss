@@ -1,0 +1,22 @@
+@import "../../style/index.scss";
+
+.container {
+  padding: 0;
+  cursor: pointer;
+  path {
+    fill: #ffffff;
+  }
+
+  svg {
+    width: 16px;
+    height: 16px;
+  }
+}
+
+.disabled {
+  cursor: default;
+  path {
+    fill: #ffffff;
+    stroke: #ffffff; 
+  }
+}

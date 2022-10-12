@@ -1,0 +1,344 @@
+@import "../style/onfido";
+@import "../style/mobileDatepicker";
+@import "../style/index";
+@import "../style/_toastify.scss";
+
+/* Указываем box sizing */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Убираем внутренние отступы */
+ul[class],
+ol[class] {
+  padding: 0;
+}
+
+/* Убираем внешние отступы */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul[class],
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Выставляем основные настройки по-умолчанию для body */
+body {
+  font-family: "Montserrat";
+  font-size: 12px;
+  min-height: var(--fullHeight);
+  scroll-behavior: smooth;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+  background-color: #111212;
+  // background-color: $background;
+
+  &.hidden {
+    overflow: hidden;
+    height: var(--fullHeight);
+  }
+}
+
+/* Удаляем стандартную стилизацию для всех ul и il, у которых есть атрибут class*/
+ul[class],
+ol[class] {
+  list-style: none;
+}
+
+/* Элементы a, у которых нет класса, сбрасываем до дефолтных стилей */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Упрощаем работу с изображениями */
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* Указываем понятную периодичность в потоке данных у article*/
+article > * + * {
+  margin-top: 1em;
+}
+
+/* Наследуем шрифты для инпутов и кнопок */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Удаляем все анимации и переходы для людей, которые предпочитай их не использовать */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+@keyframes loading {
+  from {
+    width: 0%;
+  }
+
+  to {
+    width: 100%;
+  }
+}
+
+.XNL {
+  color: $turquoise !important;
+}
+
+.USD {
+  color: rgba($white, 0.5) !important;
+}
+
+.USDC {
+  color: #d06cff !important;
+}
+
+.violet {
+  color: #d06cff !important;
+}
+
+.violetLink {
+  color: #d06cff !important;
+  cursor: pointer;
+
+  &:hover {
+    color: #dd95ff !important;
+  }
+
+  &:active {
+    color: #9748bc !important;
+  }
+}
+
+.ellipsis {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: pre;
+}
+
+.react-datepicker-wrapper .react-datepicker__input-container input {
+  display: flex;
+  width: 100%;
+  height: 38px;
+  background-color: rgba(255, 255, 255, 0.05);
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 17px;
+
+  letter-spacing: 0.1em;
+
+  color: #ffffff;
+  box-shadow: none;
+  outline: none;
+  border: none;
+  border-bottom: 1px solid rgba(#ffffff, 0.2);
+  box-sizing: border-box;
+
+  &.input-error {
+    background: rgba($error, 0.05);
+    border-bottom: 1px solid $error;
+  }
+}
+
+.react-datepicker__tab-loop {
+  position: relative;
+  .react-datepicker-popper {
+    .react-datepicker {
+      width: 398px;
+      border: none;
+
+      .react-datepicker__triangle::after,
+      .react-datepicker__triangle::before {
+        border: none;
+      }
+
+      .react-datepicker__month-container {
+        background-color: #292a2a;
+
+        .react-datepicker__month {
+          border: none;
+          margin: 0;
+          width: 398px;
+          height: 270px;
+          .react-datepicker__week {
+            .react-datepicker__day {
+              font-family: "Montserrat";
+              font-style: normal;
+              font-weight: 500;
+              font-size: 14px;
+              line-height: 70%;
+              color: #ffffff;
+              text-align: center;
+              padding-top: 15px;
+              width: 50px;
+              height: 40px;
+            }
+
+            .react-datepicker__day--selected {
+              background: $violet;
+            }
+          }
+        }
+        .react-datepicker__header {
+          font-family: "Staatliches";
+          font-style: normal;
+          font-weight: normal;
+          font-size: 18px;
+          line-height: 110%;
+          width: 398px;
+          border: none;
+          background-color: transparent;
+          .react-datepicker__current-month {
+            color: #ffffff;
+          }
+          .react-datepicker__day-names {
+            font-family: "Staatliches";
+            font-style: normal;
+            font-weight: normal;
+            font-size: 14px;
+            line-height: 70%;
+
+            .react-datepicker__day-name {
+              color: #ffffff;
+              opacity: 0.3;
+              width: 50px;
+              margin-bottom: 29px;
+              margin-top: 29px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.ui.card {
+  margin: 0;
+}
+
+.ui.card > :first-child,
+.ui.card > :last-child {
+  border-radius: 0px !important;
+}
+
+.ui.card > .content:after {
+  content: none !important;
+}
+
+#cardElement {
+  border-bottom: 1px solid rgba(#ffffff, 0.2);
+  height: 36px;
+  background: rgba(255, 255, 255, 0.05);
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 13px;
+  line-height: 16px;
+  color: "#FFFFFF";
+  padding: 10px;
+
+  &.StripeElement--invalid {
+    background-color: rgba(255, 0, 46, 0.2);
+    border-bottom: 1px solid #ff002e;
+  }
+}
+
+.notification {
+  &-container--bottom-center {
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+    max-width: none !important;
+    min-width: 0 !important;
+  }
+  &__item {
+    border: none !important;
+    border-radius: 0 !important;
+    padding: 10px 20px;
+    width: auto;
+    margin-bottom: 0 !important;
+
+    &--success {
+      background-color: #8fff00 !important;
+    }
+    &--danger {
+      background-color: #ff002e !important;
+    }
+  }
+
+  &__content {
+    padding: 0 !important;
+  }
+  &__message {
+    font-family: "Staatliches";
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px !important;
+    line-height: 100% !important;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: #111212 !important;
+    max-width: 100% !important;
+  }
+}
+
+.react-player__shadow {
+  display: none !important;
+}
+
+.custom-slider {
+  $p: &;
+
+  &__dots {
+    display: flex !important;
+    width: 100%;
+    height: 5px;
+    gap: 10px;
+    margin-top: 20px !important;
+
+    & > li {
+      background-color: rgba($white, 0.2);
+      width: 100%;
+      height: 100%;
+
+      &.slick-active {
+        #{$p}__dot {
+          background-color: $violet;
+          animation: loading 5s linear;
+        }
+      }
+    }
+  }
+
+  &__dot {
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    background-color: transparent;
+  }
+}
+
+.onfido-sdk-ui-Modal-inner {
+  max-width: 100% !important;
+}

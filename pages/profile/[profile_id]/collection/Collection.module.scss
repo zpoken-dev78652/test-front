@@ -1,0 +1,200 @@
+@import "../../../../style/index.scss";
+
+.container {
+  @include container();
+  margin-top: 30px;
+
+  .mainContent {
+    display: flex;
+    flex-direction: column;
+
+    .leftSide {
+      flex: 0 0 25%;
+      width: 25%;
+    }
+  }
+}
+
+.headerContainer {
+  background: url("../../../../public/img/collection_header.png");
+  background-size: cover;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  @include container();
+  height: 100%;
+
+  .profile {
+    display: flex;
+    align-items: center;
+    color: $white;
+    padding: 30px 0;
+
+    .content {
+      margin-left: 20px;
+      display: flex;
+      align-items: center;
+    }
+
+    .editNameIcon {
+      margin-left: 10px;
+      opacity: 0.5;
+      width: 12px;
+      height: 12px;
+      cursor: pointer;
+    }
+
+    .nick {
+      font-family: "Montserrat";
+      font-style: normal;
+      font-weight: 600;
+      font-size: 24px;
+      line-height: 100%;
+    }
+
+    .name {
+      font-family: "Montserrat";
+      font-style: normal;
+      font-weight: 600;
+      font-size: 13px;
+      line-height: 100%;
+      opacity: 0.5;
+      margin-top: 10px;
+    }
+
+    .avatar {
+      width: 60px;
+      height: 60px;
+    }
+
+    .avatarWrap {
+      position: relative;
+
+      &:hover {
+        .camera {
+          opacity: 1;
+          transition: $transitionEase;
+        }
+      }
+    }
+
+    .camera {
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      top: 0;
+      left: 0;
+      background: rgba(0, 0, 0, 0.5);
+      cursor: pointer;
+      opacity: 0;
+    }
+  }
+
+  .desc {
+    font-family: "Staatliches";
+    font-style: normal;
+    font-weight: normal;
+    font-size: 36px;
+    line-height: 70%;
+    letter-spacing: 0.15em;
+    color: $white;
+  }
+
+  .counts {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+
+    :nth-child(2) {
+      margin: 0 5px;
+    }
+
+    .count {
+      display: flex;
+      align-items: center;
+      background: rgba(255, 255, 255, 0.1);
+      padding: 10px;
+      .digits {
+        font-family: "Montserrat";
+        font-style: normal;
+        font-weight: bold;
+        font-size: 24px;
+        line-height: 100%;
+        color: $white;
+      }
+
+      .name {
+        font-family: "Staatliches";
+        font-style: normal;
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 110%;
+        color: $white;
+        text-transform: uppercase;
+        padding-left: 5px;
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .counts {
+    margin-left: 20px;
+  }
+}
+
+.canvas {
+  display: none;
+}
+
+@media (max-width: $mobile) {
+  .container {
+    padding: 0 20px;
+    .mainContent {
+      .leftSide {
+        flex: 1 1 100%;
+        width: 100%;
+      }
+    }
+  }
+  .header {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0 20px;
+    .profile {
+      display: flex;
+      padding: 20px 0;
+      .content {
+        .nick {
+          font-size: 16px;
+        }
+      }
+    }
+    .counts {
+      margin-left: 0;
+      margin-bottom: 20px;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      :nth-child(2) {
+        margin: none;
+      }
+      .count {
+        flex: 0 0 32%;
+        .digits {
+          font-size: 16px;
+        }
+        .name {
+          font-size: 10px;
+        }
+      }
+    }
+  }
+}

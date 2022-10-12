@@ -1,0 +1,147 @@
+@import "../../../style/index.scss";
+
+.container {
+  display: flex;
+  flex-direction: column;
+  width: 480px;
+  height: 560x;
+  background: rgba(255, 255, 255, 0.1);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  padding: 35px 40px;
+
+  @supports not (backdrop-filter: blur(52px)) {
+    background: #292a2a;
+  }
+
+  @media (max-width: $mobile) {
+    height: var(--fullHeight);
+    width: 100vw;
+    padding: 0;
+  }
+
+  .content {
+    @media (max-width: $mobile) {
+      padding: 30px 20px;
+      min-height: calc(var(--fullHeight) - 73px - 61px);
+      overflow: auto;
+    }
+  }
+
+  .tabs {
+    margin-bottom: 32px;
+    @media (max-width: $mobile) {
+      margin-bottom: 30px;
+
+      & > div {
+        padding-bottom: 10px;
+      }
+    }
+  }
+
+  .transaction {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+
+    @media (max-width: $mobile) {
+      flex-direction: column;
+    }
+
+    .detail {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding-left: 20px;
+      flex: 0 0 75%;
+      margin: -5px 0;
+
+      @media (max-width: $mobile) {
+        padding: 0;
+        margin: 0;
+        flex: 0 0 100%;
+      }
+
+      .item {
+        padding: 5px 0;
+      }
+      .row {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 10px;
+        .total,
+        .totalValue {
+          font-family: "Montserrat";
+          font-style: normal;
+          font-weight: 600;
+          line-height: 110%;
+          color: $white;
+
+          span {
+            color: #00e1c8;
+          }
+        }
+        .totalValue {
+          font-size: 16px;
+        }
+
+        .total {
+          font-size: 14px;
+        }
+      }
+    }
+    .img {
+      flex: 0 0 25%;
+      @include bgImg();
+      position: relative;
+      padding-bottom: 25%;
+
+      @media (max-width: $mobile) {
+        flex: 0 0 100%;
+        width: 42%;
+        padding-bottom: 42%;
+        margin: 0 auto 25px;
+      }
+    }
+  }
+
+  .header {
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 120%;
+    color: $white;
+    margin-bottom: 30px;
+
+    @media (max-width: $mobile) {
+      border-bottom: 1px solid #302f31;
+      padding: 20px;
+      font-weight: 600;
+      font-size: 20px;
+      line-height: 100%;
+      letter-spacing: 0.01em;
+      margin-bottom: 0;
+    }
+  }
+}
+
+.buttonsConfirm {
+  display: flex;
+  margin-top: 20px;
+
+  :first-child {
+    margin-right: 20px;
+  }
+}
+
+.couponWrap {
+  margin-top: 10px;
+  display: flex;
+  gap: 10px;
+
+  button {
+    height: 39px;
+    width: 118px;
+  }
+}
