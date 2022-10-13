@@ -18,8 +18,15 @@ jobs:
       - uses: actions/checkout@v2
         with:
           submodules: true
-      - name: Build And Deploy
-        id: builddeploy
+      - name: Prebuild
+        run: |
+          nvm install 12.22.5
+          yarn install
+      - name: Build
+        run: |
+          yarn build
+      - name: Deploy
+        id: deploy
         uses: Azure/static-web-apps-deploy@v1
         with:
           azure_static_web_apps_api_token: ${{ secrets.AZURE_STATIC_WEB_APPS_API_TOKEN_WHITE_SAND_04A936910 }}
